@@ -42,15 +42,14 @@ Operating a headless Raspberry Pi (home server, media streamer, smart home gatew
 
 ## Screenshots & Visual Tour
 
-*(Screenshots can be added to your repository's `/docs/images/` or `assets/` directory and referenced below)*
-
 | Interactive Dashboard | Real-Time Health & Telemetry | Service Control |
 | :---: | :---: | :---: |
 | <img width="454" height="235" alt="image" src="https://github.com/user-attachments/assets/5ef46735-5bdd-427b-9f08-559b95d47405" /> | <img width="398" height="310" alt="image" src="https://github.com/user-attachments/assets/bb42796c-4ee2-4d60-956d-e1c1a2d680b1" /> | <img width="279" height="222" alt="image" src="https://github.com/user-attachments/assets/35f641f4-09af-44d0-bda8-864333623ef4" /> |
 
 | Log Tail & Download | Boot & Periodic Alerts | Process Inspectors |
 | :---: | :---: | :---: |
-| <img width="438" height="141" alt="image" src="https://github.com/user-attachments/assets/9cf2c2f7-3589-4b8a-80b5-c3f349e8010d" /> | <img width="393" height="253" alt="image" src="https://github.com/user-attachments/assets/47755548-7857-4c09-b9a2-7fdc17cc60fb" /> | <img width="413" height="252" alt="image" src="https://github.com/user-attachments/assets/ebe5f4f2-d944-43f9-9548-ab65386ea723" /> |
+| <img width="438" height="141" alt="image" src="https://github.com/user-attachments/assets/9cf2c2f7-3589-4b8a-80b5-c3f349e8010d" /> | <img width="393" height="253" alt="image" src="https://github.com/user-attachments/assets/47755548-7857-4c09-b9a2-7fdc17cc60fb" /> | <img width="413" height="252" alt="image" src="https://github.com/user-attachments/assets/0ce8ec52-caf7-462c-bdb5-eb475ec5287a" />
+ |
 
 ---
 
