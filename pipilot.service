@@ -1,0 +1,17 @@
+[Unit]
+Description=PiPilot - Raspberry Pi Telegram Remote Control & Monitoring
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/pipilot
+ExecStart=/home/pi/pipilot/venv/bin/python3 /home/pi/pipilot/bot.py
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

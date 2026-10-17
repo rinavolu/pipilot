@@ -1,0 +1,71 @@
+# ==============================================================================
+# PiPilot Configuration Template
+# ==============================================================================
+
+bot:
+  # Telegram Bot Token from @BotFather
+  token: "YOUR_TELEGRAM_BOT_TOKEN_HERE"
+
+  # List of allowed Telegram Chat IDs (Admin user IDs)
+  admin_chat_ids:
+    - 123456789 # Replace with your numeric Telegram User ID from @userinfobot
+
+  # Send a notification message when the Pi boots up and bot starts
+  send_startup_message: true
+
+# Periodic System Health Status Reports (sent to admin chat IDs)
+periodic_status:
+  enabled: true
+  interval_minutes: 180 # Interval in minutes (e.g. 180 = 3 hours, 60 = 1 hour)
+
+# System power command definitions
+system:
+  reboot_cmd: "sudo reboot"
+  shutdown_cmd: "sudo shutdown now"
+  # Interface name to prioritize for IP discovery (optional, defaults to auto-detect)
+  preferred_interface: "wlan0"
+
+# User-defined applications/services to monitor and control
+services:
+  - id: "webapp"
+    name: "Web Application"
+    type: "custom" # Options: "custom" or "systemd"
+    start_cmd: "/home/pi/scripts/start_webapp.sh"
+    stop_cmd: "/home/pi/scripts/stop_webapp.sh"
+    restart_cmd: "" # Leave empty to auto-run stop then start
+    log_file: "/home/pi/logs/webapp.log"
+
+  - id: "worker"
+    name: "Background Worker"
+    type: "custom"
+    start_cmd: "/home/pi/scripts/start_worker.sh"
+    stop_cmd: "/home/pi/scripts/stop_worker.sh"
+    restart_cmd: ""
+    log_file: "/home/pi/logs/worker.log"
+
+  - id: "api_service"
+    name: "Systemd API Service"
+    type: "systemd"
+    service_name: "my-api.service"
+    log_file: ""
+
+# Log Inspection & Transfer Settings
+logs:
+  # Number of lines to preview directly in Telegram
+  default_tail_lines: 50
+  # Action after sending log file document: "none", "truncate" (clear content), or "delete" (remove file)
+  post_send_action: "none" # Options: "none", "truncate", "delete"
+
+# Application Process Inspectors (Java, Python, JavaScript)
+inspectors:
+  java:
+    enabled: true
+    jps_path: "/home/pi/.sdkman/candidates/java/current/bin/jps"
+
+  python:
+    enabled: true
+    exclude_self: true # Exclude PiPilot process itself from list
+
+  javascript:
+    enabled: true
+    pm2_enabled: true # Check PM2 managed applications if available
